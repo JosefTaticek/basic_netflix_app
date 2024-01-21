@@ -1,0 +1,11 @@
+.cta-button button {
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.cta-button {
+    display: flex;
+    flex-direction: column;
+:    align-items: center;
+}
