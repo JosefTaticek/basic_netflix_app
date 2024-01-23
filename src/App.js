@@ -1,61 +1,43 @@
-import {useState, useEffect} from "react"
+import {useState} from "react"
+import allMovies from "./data"
+import categories from "./categories"
+import "./index.css"
 
 const App = () => {
-  
-  //1. Destructuring
 
-  const vychoziPole = ["David", "Hermiona", "Harry"]
-  const [student1, student2, student3] = vychoziPole
+  const [typeOfMovie, setTypeOfMovie] = useState("romantický")
 
-  //2. UseState
-  const [title, setTitle] = useState("Původní text")
-  const buttonHandler = (()=>{
-    setTitle("Nový text")
-  })
-  
-  //4. .map & filter
-
-  //a) .map
-  const data = [5, 6, 7, 8]
-  const novaData = data.map((jednoCislo)=>{
-    return jednoCislo + 10
-  })
-  console.log(novaData);
-
-  //b) .filter
-  const data2 = [5, 6, 7, 8] 
-  const vymazaneCislo = 5
-
-  const novaData2 = data.filter((jednoCislo2)=>{
-    return jednoCislo2 != vymazaneCislo 
-  })
-  console.log(novaData2);
-
-  
-  //5. Props
-
-
-
-  //6. useEffect 
-  const useEffect = (()=>{
+  //Filter films written to typeOfMovie
+  const vysledneFilmy = allMovies.filter((oneMovie)=>{
+    return oneMovie["category"] === typeOfMovie
   })
 
-  //7. Práce s API
-  const getQuote = async () => {
-    const response = await fetch("https://api.kanye.rest/")
-    const data = await response.json()
-    console.log(data["quote"]);
-  }
-
-  getQuote()
-
-  return <div className="cta-button">
-    <h1>{title}</h1>
-    <button type="button" onClick={buttonHandler}>Změnit title</button>
-
+  return <div>
+    <div className="all-buttons">
+      { //Buttons with texts from categories, after click -> setTypeOfMovie to the name of category
+        categories.map((oneCategory, index)=>{ //Index = category of the film (0, 1, 2)
+          return <button className="one-button" key={index} onClick={(()=>setTypeOfMovie(oneCategory))}>{oneCategory}</button>
+        })
+      }
+    </div>
+    <div className="all-movies">
+    {
+      //Rendering of films & texts
+      vysledneFilmy.map((oneMovie)=>{
+        const {id, image, title, age, tags, description } = oneMovie //Destructuring
+        
+        return <div key={id} className="one-movie">
+          <img src={image} alt="" />
+          <h2>{title}</h2>
+          <p>{age}</p>
+          <p>{tags}</p>
+          <p>{description}</p>
+        </div>
+      })
+      
+    } 
+    </div>
   </div>
 }
-
-
 
 export default App
