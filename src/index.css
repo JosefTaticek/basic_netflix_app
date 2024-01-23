@@ -1,5 +1,6 @@
 body {
-    background-color: #141414;
+    background-color: black;
+    margin: 0px;
     
 }
 
@@ -52,4 +53,32 @@ body {
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+
+.FAQ_component {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    height: 100vh;
+    margin-top: 80px;
+}
+
+.all-questions {
+    color: #e5e5e5;
+}
+
+.all-questions h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.border {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    background-color: rgb(45,45,45);
+    color: white;
+    height: 5px;
+    font-size: 0px;
 }

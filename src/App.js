@@ -2,16 +2,16 @@ import {useState} from "react"
 import allMovies from "./data"
 import categories from "./categories"
 import "./index.css"
+import questions from "./data_faq"
+import Question from "./Components/question"
 
 const App = () => {
-
   const [typeOfMovie, setTypeOfMovie] = useState("romantický")
-
   //Filter films written to typeOfMovie
   const vysledneFilmy = allMovies.filter((oneMovie)=>{
     return oneMovie["category"] === typeOfMovie
   })
-
+  
   return <div>
     <div className="all-buttons">
       { //Buttons with texts from categories, after click -> setTypeOfMovie to the name of category
@@ -37,7 +37,27 @@ const App = () => {
       
     } 
     </div>
+
+
+    <div>
+      <div>
+        <h1 className="border">X</h1>
+      </div> 
+    </div>
+    
+    <div className="FAQ_component"> 
+      <div className="all-questions"> 
+        {/*FAQ page*/}
+        <h1>Často kladené dotazy</h1>
+        {
+        questions.map((oneQuestion)=>{ //Mapping of data from data_faq.js
+          return <Question key={oneQuestion.id} {...oneQuestion}/>
+          })
+        }
+      </div>
+    </div>
   </div>
+  
 }
 
 export default App
