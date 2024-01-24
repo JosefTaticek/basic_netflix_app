@@ -3,13 +3,18 @@
     margin-bottom: 20px;
     padding: 10px;
     background-color: rgb(45,45,45);
-
 }
+
+.one-question:hover{
+    opacity: 0.9;
+}
+
 
 .one-question section {
     display: flex;
     flex-direction: row;
     justify-content: space-between; /*This will split the space between both text & button*/
+    cursor: pointer;
 }
 
 .one-question h2 {
@@ -23,7 +28,7 @@
     margin-right: 10px;
     padding: 5px 10px;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
@@ -31,4 +36,10 @@
     margin: 20px 10px;
     font-size: 20px;
 
+}
+
+.button-clickable {
+    background-color: rgb(45,45,45);
+    color: white;
+    border: none;
 }

@@ -1,9 +1,10 @@
 import {useState} from "react"
-import allMovies from "./data"
-import categories from "./categories"
 import "./index.css"
-import questions from "./data_faq"
+import allMovies from "./Data/data"
+import categories from "./Data/data_categories"
+import questions from "./Data/data_faq"
 import Question from "./Components/question"
+import OneMovieSlider from "./Components/OneMovieSlider"
 
 const App = () => {
   const [typeOfMovie, setTypeOfMovie] = useState("romantický")
@@ -36,6 +37,20 @@ const App = () => {
       })
       
     } 
+    </div>
+
+
+    <div>
+      <div>
+        <h1 className="border">X</h1>
+      </div> 
+    </div>
+  
+
+    <div>
+      <div className="slider">
+        <OneMovieSlider />
+      </div>
     </div>
 
 

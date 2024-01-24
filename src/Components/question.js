@@ -1,17 +1,16 @@
 import React from 'react'
 import "./question.css"
 import {useState} from "react"
-
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 const Question = ({title, info}) => {
     const [show, setShow] = useState(false)
 
     return <div className="one-question">
-        <section>
+        <section onClick={()=>setShow(!show)}>
             <h2>{title}</h2>
-            <button onClick={()=>setShow(!show)}>Odpověď</button>
+            <button className="button-clickable" ><FaAngleDoubleDown /></button>
         </section>
-
         {show && <p>{info}</p>}
     </div>
 }
