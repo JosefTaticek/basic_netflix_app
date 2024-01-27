@@ -38,8 +38,7 @@ const App = () => {
       
     } 
     </div>
-
-
+  
     <div>
       <div>
         <h1 className="border">X</h1>
@@ -59,6 +58,7 @@ const App = () => {
         <h1 className="border">X</h1>
       </div> 
     </div>
+    
     
     <div className="FAQ_component"> 
       <div className="all-questions"> 
