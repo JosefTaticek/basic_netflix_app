@@ -1,6 +1,7 @@
 body {
     background-color: black;
     margin: 0px;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;;
 }
 
 .all-buttons {
@@ -93,3 +94,16 @@ body {
     align-items: center;
 }
 
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.search-bar h2 {
+    margin-bottom: 20px;
+    color: white;
+}

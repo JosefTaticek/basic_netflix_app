@@ -2,7 +2,7 @@ import React from 'react'
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import "./OneMovieSlider.css"
-import {useState} from "react"
+import { useState } from "react"
 import data from "../Data/data"
 
 

@@ -5,6 +5,7 @@ import categories from "./Data/data_categories"
 import questions from "./Data/data_faq"
 import Question from "./Components/question"
 import OneMovieSlider from "./Components/OneMovieSlider"
+import SearchBar from "./Components/SearchBar"
 
 const App = () => {
   const [typeOfMovie, setTypeOfMovie] = useState("romantický")
@@ -70,6 +71,20 @@ const App = () => {
           })
         }
       </div>
+    </div>
+
+    <div>
+      <div className="search-bar">
+        <h2>Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail.</h2>
+        <SearchBar />
+      </div>
+    </div>
+
+
+    <div>
+      <div>
+        <h1 className="border">X</h1>
+      </div> 
     </div>
   </div>
   

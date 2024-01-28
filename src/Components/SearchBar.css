@@ -1,0 +1,29 @@
+
+.emailAdress {
+    font-size: 20px;
+    height: 40px;
+    width: 400px;
+    text-align: left;    
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: rgb(133, 133, 133);
+}
+
+.emailAdress::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+.submitButton {
+/*input[type="submit"] Another option how to design the button*/
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    text-align: left;  
+    background-color: red;
+    border-radius: 10px; 
+    margin-left: 5px;
+    color: white;
+    cursor: pointer;
+
+}
