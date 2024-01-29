@@ -28,7 +28,7 @@ const SearchBar = () => {
                 type="email" 
                 placeholder="E-mailová adresa" 
                 className="emailAdress" 
-                value={firstName}//3. From firstName, it's set as the value of this search bar
+                value={firstName} //3. From firstName, it's set as the value of this search bar
                 onChange={(event) => setFirstName(event.target.value)}/> {/*1. We are catching every change in the bar and saving it to firstName. Event - data about the data send, target (target place - search bar), value (text)*/}
             <input 
                 onClick={formSubmit} 

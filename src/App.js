@@ -6,6 +6,9 @@ import questions from "./Data/data_faq"
 import Question from "./Components/question"
 import OneMovieSlider from "./Components/OneMovieSlider"
 import SearchBar from "./Components/SearchBar"
+import SpreadOperator from "./Components/SpreadOperator"
+import RestOperator from "./Components/RestOperator"
+import AdvancedSearchBar from "./Components/AdvancedSearchBar"
 
 const App = () => {
   const [typeOfMovie, setTypeOfMovie] = useState("romantický")
@@ -80,14 +83,37 @@ const App = () => {
       </div>
     </div>
 
-
     <div>
       <div>
         <h1 className="border">X</h1>
       </div> 
     </div>
+
+    {/*
+    <div>
+      <div>
+        <SpreadOperator />
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <RestOperator />
+      </div>
+    </div>
+    */} 
+
+    <div>
+      <div>
+        <h1 className="register_form">Registrujte se</h1>
+        <AdvancedSearchBar />
+      </div>
+    </div>
+
+
+
+
   </div>
-  
 }
 
 export default App
