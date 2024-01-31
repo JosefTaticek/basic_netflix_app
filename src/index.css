@@ -1,5 +1,5 @@
-body {
-    background-color: black;
+.whole_page {
+    background-color: #000000;
     margin: 0px;
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;;
 }
@@ -93,7 +93,7 @@ body {
     align-items: center;
 }
 
-
+/*Registration (search-bar) container */  
 .search-bar {
     display: flex;
     flex-direction: column;
@@ -107,7 +107,62 @@ body {
     color: white;
 }
 
+
+/*Register form */  
 .register_form {
     display: flex;
     justify-content: center;
 }
+
+
+/*Kids container */  
+.profiles_children {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.profiles_children p {
+    width: 80%;
+}
+
+.profiles_children img {
+    width: 80%;
+    height: 80%;
+}
+
+
+/*Video container */  
+.video_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .video_container video {
+    z-index: 10; /* Ensure this is higher than the image's z-index */
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    height: 46%;
+    object-fit: cover;
+  }
+  
+  .video_container_text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .video_container_text p {
+    margin-top: -10px;
+  }
+
+
+

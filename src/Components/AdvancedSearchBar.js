@@ -7,7 +7,6 @@ const AdvancedSearchBar = () => {
     const [oneUser, setOneUser] = useState({fullName: "", email: "", age: ""}) //Refactored useState, object
     const [users, setUsers] = useState([])//Field, we gonna save the data to this variable
 
-
     const formChange = (event)=>{
         const name = event.target.name
         const value = event.target.valueě

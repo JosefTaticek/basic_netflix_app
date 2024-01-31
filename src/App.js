@@ -9,6 +9,9 @@ import SearchBar from "./Components/SearchBar"
 import SpreadOperator from "./Components/SpreadOperator"
 import RestOperator from "./Components/RestOperator"
 import AdvancedSearchBar from "./Components/AdvancedSearchBar"
+import profile_kids from "./images/profile_kids.png";
+import device_pile from "./images/device-pile.png";
+import videodevices from "./videos/videodevices.m4v";
 
 const App = () => {
   const [typeOfMovie, setTypeOfMovie] = useState("romantický")
@@ -17,7 +20,7 @@ const App = () => {
     return oneMovie["category"] === typeOfMovie
   })
   
-  return <div>
+  return <div className="whole_page">
     <div className="all-buttons">
       { //Buttons with texts from categories, after click -> setTypeOfMovie to the name of category
         categories.map((oneCategory, index)=>{ //Index = category of the film (0, 1, 2)
@@ -25,6 +28,7 @@ const App = () => {
         })
       }
     </div>
+
     <div className="all-movies">
     {
       //Rendering of films & texts
@@ -42,19 +46,49 @@ const App = () => {
       
     } 
     </div>
-  
+
     <div>
       <div>
         <h1 className="border">X</h1>
       </div> 
     </div>
-  
+
+
 
     <div>
-      <div className="slider">
-        <OneMovieSlider />
+      <div>
+      <div className="video_container_text">
+        <h1>Dívejte se kdekoli</h1>
+        <p>Streamujte neomezeně filmy a TV pořady na telefonu, tabletu, notebooku nebo televizi.</p>
+      </div>  
+      <div className="video_container">
+        <img src={device_pile} alt="stranger_things_video" />
+        <video playsInline muted autoPlay loop className="overlay-video">
+        <source src={videodevices} type="video/mp4"/>
+        </video>
+      </div> 
+      </div> 
+    </div>
+
+
+    <div>
+      <div>
+        <h1 className="border">X</h1>
+      </div> 
+    </div>
+
+
+
+    <div>
+      <div className="profiles_children">
+      <img src={profile_kids} alt="kids" />
+        <div>
+          <h1>Vytvořte profily pro děti</h1>
+          <p>S vaším členstvím se děti můžou vydat za dobrodružstvím i se svými oblíbenými hrdiny, a to v prostředí, které je stvořené přímo pro ně.</p>
+        </div>
       </div>
     </div>
+
 
 
     <div>
@@ -111,7 +145,17 @@ const App = () => {
     </div>
 
 
+    <div>
+      <div>
+        <h1 className="border">X</h1>
+      </div> 
+    </div>
 
+    <div>
+      <div className="slider">
+        <OneMovieSlider />
+      </div>
+    </div>
 
   </div>
 }
