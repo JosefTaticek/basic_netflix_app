@@ -83,7 +83,8 @@
 
 
 .all-questions h1 {
-    font-size: 40px;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 .slider {
@@ -122,47 +123,99 @@
     justify-content: center;
     gap: 20px;
     font-size: 25px;
+    margin-left: 300px;
 }
 
 .profiles_children p {
-    width: 80%;
+    width: 50%;
 }
 
 .profiles_children img {
-    width: 80%;
-    height: 80%;
+    width: 50%;
 }
 
 
 /*Video container */  
 .video_container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+    align-items: center;
+}
 
-
-  .video_container video {
-    z-index: 10; /* Ensure this is higher than the image's z-index */
-    position: absolute;
-    top: 50px;
-    left: 400px;
-    height: 46%;
-    object-fit: cover;
-  }
-  
-  .video_container_text {
+.video_container_text {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-size: 20px;
-  }
+    justify-content: left;
+    margin-left: 400px;
+    font-size: 25px;
+    margin-right: -300px;
+}
 
-  .video_container_text p {
+.video_container_text p {
     margin-top: -10px;
+    margin-right: -80px;
+    width: 500px;
   }
 
+.video_container_video {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.video_container_video img {
+    position: relative;
+    display: block;
+}
+
+.video_container_video video {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    pointer-events: none; 
+}
+
+/*App container */  
+.app_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.app_container_text {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    width: 600px;
+    margin-left: 40px;
+}
+
+.app_container_text p {
+    margin-top: -10px;
+}
 
 
+/*TV container*/
+.tv_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.tv_container_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 25px;
+    width: 500px;
+}
+
+.tv_container_text p {
+    margin-top: -20px;
+}
