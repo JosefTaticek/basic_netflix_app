@@ -219,3 +219,12 @@
 .tv_container_text p {
     margin-top: -20px;
 }
+
+.border-header {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    background-color: rgb(45,45,45);
+    color: white;
+    height: 5px;
+    font-size: 0px;
+}

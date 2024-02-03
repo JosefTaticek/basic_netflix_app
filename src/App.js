@@ -11,6 +11,7 @@ import SearchBar from "./Components/SearchBar"
 import SpreadOperator from "./Components/SpreadOperator"
 import RestOperator from "./Components/RestOperator"
 import AdvancedSearchBar from "./Components/AdvancedSearchBar"
+import NavBar from "./Components/NavBar"
 
 import profile_kids from "./images/profile_kids.png";
 import device_pile from "./images/device-pile.png";
@@ -28,69 +29,22 @@ const App = () => {
     return oneMovie["category"] === typeOfMovie
   })
   
+  //MAIN RETURN PART
   return <div className="whole_page">
-    <div className="all-buttons">
-      { //Buttons with texts from categories, after click -> setTypeOfMovie to the name of category
-        categories.map((oneCategory, index)=>{ //Index = category of the film (0, 1, 2)
-          return <button className="one-button" key={index} onClick={(()=>setTypeOfMovie(oneCategory))}>{oneCategory}</button>
-        })
-      }
-    </div>
 
-    <div className="all-movies">
-    {
-      //Rendering of films & texts
-      vysledneFilmy.map((oneMovie)=>{
-        const {id, image, title, age, tags, description } = oneMovie //Destructuring
-        
-        return <div key={id} className="one-movie">
-          <img src={image} alt="" />
-          <h2>{title}</h2>
-          <p>{age}</p>
-          <p>{tags}</p>
-          <p>{description}</p>
-        </div>
-      })
-      
-    } 
+
+
+    <div>
+      <NavBar />
     </div>
 
 
 
     <div>
       <div>
-        <h1 className="border">X</h1>
+        <h1 className="border-header">X</h1>
       </div> 
     </div>
-
-
-
-
-    <div>
-      <div>
-        <div>
-          <div>Logo</div>
-          <div>Language button</div>
-          <div>Login button</div> 
-        </div>
-        <div>
-          <h1>Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
-          <p>Dívejte se kdekoli. Zrušte kdykoli.</p>
-          <p>Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail</p>
-          <input type="email" placeholder="E-mailová adresa"></input>
-          <input type="submit" value="Začít"></input>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div>
-      <div>
-        <h1 className="border">X</h1>
-      </div> 
-    </div>
-
 
 
     <div>
@@ -251,6 +205,33 @@ const App = () => {
         <OneMovieSlider />
       </div>
     </div>
+
+    <div className="all-buttons">
+      { //Buttons with texts from categories, after click -> setTypeOfMovie to the name of category
+        categories.map((oneCategory, index)=>{ //Index = category of the film (0, 1, 2)
+          return <button className="one-button" key={index} onClick={(()=>setTypeOfMovie(oneCategory))}>{oneCategory}</button>
+        })
+      }
+    </div>
+
+    <div className="all-movies">
+    {
+      //Rendering of films & texts
+      vysledneFilmy.map((oneMovie)=>{
+        const {id, image, title, age, tags, description } = oneMovie //Destructuring
+        
+        return <div key={id} className="one-movie">
+          <img src={image} alt="" />
+          <h2>{title}</h2>
+          <p>{age}</p>
+          <p>{tags}</p>
+          <p>{description}</p>
+        </div>
+      })
+      
+    } 
+    </div>
+
 
   </div>
 }
